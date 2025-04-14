@@ -71,3 +71,9 @@ async def handle_files(msg: types.Message):
         await msg.reply(f"Document file_id: {msg.document.file_id}")
     else:
         await msg.reply("Файл получен, но это не видео и не документ.")
+
+def start_bot():
+    executor.start_polling(dp, skip_updates=True)
+
+if __name__ == '__main__':
+    start_bot()
